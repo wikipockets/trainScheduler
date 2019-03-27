@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the page auto refresh -->
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <title>Train Time</title>
+    <link rel="icon" href="assets/images/train-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1 class="display-1">Anytime is Train Time</h1>
+                <h2 class="display-2">Chugga chugga.</h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Current Train Schedule</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table" id="train-inputs">
+                                <thead>
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Destination</th>
+                                        <th>Frequency (min)</th>
+                                        <th>Next Arrival</th>
+                                        <th>Minutes Away</th>
+                                       </tr>
+                                </thead>
+                                <tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Add Train</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form id="train-form">
+                                <div class="form-group">
+                                    <label for="form-name">Train Name</label>
+                                    <input type="text" class="form-control" id="form-name" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-destination">Destination</label>
+                                    <input type="text" class="form-control" id="form-destination" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-time">First Train Time (HH:mm - military time)</label>
+                                    <input type="text" class="form-control" id="form-time" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-frequency">Frequency (min)</label>
+                                    <input type="number" min="0" class="form-control" id="form-frequency" placeholder="">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/javascript/jquery-3.1.1.min.js"></script>
+<script src="assets/javascript/tether.js"></script>
+<script src="assets/javascript/bootstrap.min.js"></script>
+<script src="assets/javascript/moment.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+<script src="assets/javascript/app.js"></script>
+
+</html>
